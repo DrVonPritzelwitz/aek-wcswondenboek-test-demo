@@ -15,7 +15,7 @@ describe('When the user opens the menu and clicks on an item. The page...', () =
 		cy.get('#chap-3a513052e1501512347ebe17a5927078 > h1').then($target => {
             let coords = $target[0].getBoundingClientRect();
 			
-			expect(Math.ceil(coords.y), { timeout: 10000 }).to.equal(56);
+			expect(Math.ceil(coords.y)).to.lessThan(60);
  		});
 
 	});
